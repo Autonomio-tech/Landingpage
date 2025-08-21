@@ -1,0 +1,78 @@
+<!-- Autonomio Landing Page (GitHub-ready) -->
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Autonomio – Coming Soon</title>
+  <meta name="description" content="Autonomio – intelligent business management for auto parts and mechanic workshops. Join the waitlist." />
+  <link rel="canonical" href="https://autonomio.app/" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{brand:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1d4ed8',700:'#1e40af',800:'#1e3a8a',900:'#172554'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(4px)}50%{transform:translateX(-4px)}75%{transform:translateX(2px)}}.focus-ring:focus{outline:2px solid #1d4ed8;outline-offset:2px}</style>
+  <!-- Optional: set window.WAITLIST_API_BASE before closing head to point to external API -->
+  <script>
+    // Redirect github.io preview to custom domain once DNS + Pages active
+    (function(){
+      var target='autonomio.app';
+      if(location.hostname.endsWith('github.io')){
+        var rest=location.pathname+location.search+location.hash;
+        location.replace('https://'+target+rest);
+      }
+    })();
+  </script>
+</head>
+<body class="h-full bg-white font-sans text-gray-800 antialiased selection:bg-blue-200/60 selection:text-gray-900">
+  <div class="min-h-full flex flex-col">
+    <header class="w-full px-6 pt-8">
+      <div class="max-w-6xl mx-auto flex items-center justify-center md:justify-start">
+  <img src="logo.svg" alt="Autonimio" class="h-9 w-auto select-none" />
+      </div>
+    </header>
+    <main class="flex-1 flex items-center">
+      <div class="w-full max-w-4xl mx-auto px-6 py-24 md:py-36 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold md:font-bold tracking-tight leading-[1.05] text-gray-900">We are building the future of the automotive industry</h1>
+        <p class="mt-6 text-sm sm:text-base md:text-lg text-gray-600/90 mx-auto max-w-3xl leading-relaxed md:leading-relaxed">Autonomio – intelligent business management for auto parts and mechanic workshops</p>
+        <form id="waitlistForm" class="mt-12 max-w-lg mx-auto flex flex-col sm:flex-row gap-4 sm:gap-3" novalidate>
+          <div class="relative flex-1 group">
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="Enter your email to join the waitlist" class="peer w-full rounded-xl border border-gray-200 bg-white/70 backdrop-blur-sm px-5 py-3.5 text-sm md:text-base text-gray-900 placeholder:text-gray-400 shadow-sm shadow-gray-200/40 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/25 transition outline-none" />
+            <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-transparent peer-focus:ring-brand-500/40 transition"></div>
+            <p id="emailMsg" class="hidden mt-1.5 text-[11px] font-medium text-amber-600 text-left" role="alert" aria-live="polite">Please enter a valid email address.</p>
+          </div>
+          <button type="submit" class="rounded-xl bg-brand-600 text-white text-sm md:text-base font-medium px-6 py-3.5 shadow-sm shadow-brand-600/30 hover:bg-brand-500 hover:shadow-brand-500/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 transition disabled:opacity-60 disabled:cursor-not-allowed">Join the waitlist</button>
+        </form>
+        <div id="successMsg" class="hidden mt-6 text-sm font-medium text-emerald-600" role="status" aria-live="polite">Thank you – you're on the list! 🚀</div>
+      </div>
+    </main>
+    <footer class="w-full py-10 mt-auto">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
+        <div class="flex items-center gap-4 text-gray-400">
+          <a href="https://github.com/organizations/Autonomio-tech" target="_blank" aria-label="GitHub" class="p-2 hover:text-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-600 transition" rel="noopener">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.54 2 12.084c0 4.458 2.865 8.238 6.839 9.572.5.094.682-.219.682-.487 0-.243-.01-1.05-.014-1.905-2.782.614-3.369-1.2-3.369-1.2-.455-1.166-1.11-1.477-1.11-1.477-.908-.63.069-.617.069-.617 1.004.072 1.532 1.05 1.532 1.05.892 1.544 2.341 1.098 2.91.84.092-.656.35-1.099.636-1.352-2.22-.258-4.555-1.124-4.555-5.002 0-1.105.39-2.007 1.029-2.716-.103-.258-.446-1.296.098-2.7 0 0 .84-.27 2.75 1.035A9.39 9.39 0 0 1 12 6.844c.85.004 1.705.116 2.504.34 1.909-1.305 2.748-1.035 2.748-1.035.546 1.404.202 2.442.1 2.7.64.709 1.028 1.611 1.028 2.716 0 3.888-2.339 4.741-4.566 4.994.359.314.678.93.678 1.875 0 1.353-.012 2.444-.012 2.777 0 .27.18.585.688.486A10.097 10.097 0 0 0 22 12.084C22 6.54 17.522 2 12 2Z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+        <div class="text-[11px] tracking-wide text-gray-400">&copy; 2025 Autonomio</div>
+      </div>
+    </footer>
+  </div>
+  <script>
+  // --- Waitlist form logic ---
+  const form = document.getElementById('waitlistForm');
+    const emailInput = document.getElementById('email');
+    const emailMsg = document.getElementById('emailMsg');
+    const successMsg = document.getElementById('successMsg');
+    function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);} 
+    // Resolve API base
+    let API_BASE = '';
+    if (window.WAITLIST_API_BASE) {
+      API_BASE = window.WAITLIST_API_BASE.replace(/\/$/, '');
+    } else if (location.hostname === 'localhost') {
+      API_BASE = 'http://localhost:8080';
+    }
+    if(!API_BASE){console.info('[Autonomio] Using same-origin API (relative /api/v1/waitlist). Set window.WAITLIST_API_BASE to override.');}
+    form.addEventListener('submit', async e => { e.preventDefault(); const email = emailInput.value.trim(); const ok = validEmail(email); emailMsg.classList.toggle('hidden', ok); if(!ok){ emailInput.focus(); emailInput.classList.add('animate-[shake_0.25s_ease-in-out]'); setTimeout(()=>emailInput.classList.remove('animate-[shake_0.25s_ease-in-out]'), 300); return; } form.querySelector('button').disabled = true; successMsg.classList.add('hidden'); try { const resp = await fetch(API_BASE + '/api/v1/waitlist', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email}) }); if(resp.ok){ successMsg.textContent="Thank you – you're on the list! 🚀"; successMsg.classList.remove('hidden'); form.reset(); } else { const err = await resp.json().catch(()=>null); successMsg.textContent = err && err.detail ? err.detail : 'Sorry, something went wrong.'; successMsg.classList.remove('hidden'); } } catch(e){ successMsg.textContent='Network error. Please try again.'; successMsg.classList.remove('hidden'); } form.querySelector('button').disabled = false; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap kann später hinzugefügt werden:
+# Sitemap: https://autonomio.app/sitemap.xml
